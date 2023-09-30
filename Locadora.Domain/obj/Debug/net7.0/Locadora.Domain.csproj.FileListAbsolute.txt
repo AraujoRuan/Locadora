@@ -1,0 +1,11 @@
+c:\dev\Locadora\Locadora.Domain\bin\Debug\net7.0\Locadora.Domain.deps.json
+c:\dev\Locadora\Locadora.Domain\bin\Debug\net7.0\Locadora.Domain.dll
+c:\dev\Locadora\Locadora.Domain\bin\Debug\net7.0\Locadora.Domain.pdb
+c:\dev\Locadora\Locadora.Domain\obj\Debug\net7.0\Locadora.Domain.GeneratedMSBuildEditorConfig.editorconfig
+c:\dev\Locadora\Locadora.Domain\obj\Debug\net7.0\Locadora.Domain.AssemblyInfoInputs.cache
+c:\dev\Locadora\Locadora.Domain\obj\Debug\net7.0\Locadora.Domain.AssemblyInfo.cs
+c:\dev\Locadora\Locadora.Domain\obj\Debug\net7.0\Locadora.Domain.csproj.CoreCompileInputs.cache
+c:\dev\Locadora\Locadora.Domain\obj\Debug\net7.0\Locadora.Domain.dll
+c:\dev\Locadora\Locadora.Domain\obj\Debug\net7.0\refint\Locadora.Domain.dll
+c:\dev\Locadora\Locadora.Domain\obj\Debug\net7.0\Locadora.Domain.pdb
+c:\dev\Locadora\Locadora.Domain\obj\Debug\net7.0\ref\Locadora.Domain.dll

@@ -1,0 +1,15 @@
+C:\dev\Locadora\Locadora.Infra\bin\Debug\net7.0\Locadora.Infra.deps.json
+C:\dev\Locadora\Locadora.Infra\bin\Debug\net7.0\Locadora.Infra.dll
+C:\dev\Locadora\Locadora.Infra\bin\Debug\net7.0\Locadora.Infra.pdb
+C:\dev\Locadora\Locadora.Infra\bin\Debug\net7.0\Locadora.Domain.dll
+C:\dev\Locadora\Locadora.Infra\bin\Debug\net7.0\Locadora.Domain.pdb
+C:\dev\Locadora\Locadora.Infra\obj\Debug\net7.0\Locadora.Infra.csproj.AssemblyReference.cache
+C:\dev\Locadora\Locadora.Infra\obj\Debug\net7.0\Locadora.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\Locadora\Locadora.Infra\obj\Debug\net7.0\Locadora.Infra.AssemblyInfoInputs.cache
+C:\dev\Locadora\Locadora.Infra\obj\Debug\net7.0\Locadora.Infra.AssemblyInfo.cs
+C:\dev\Locadora\Locadora.Infra\obj\Debug\net7.0\Locadora.Infra.csproj.CoreCompileInputs.cache
+C:\dev\Locadora\Locadora.Infra\obj\Debug\net7.0\Locadora.Infra.csproj.CopyComplete
+C:\dev\Locadora\Locadora.Infra\obj\Debug\net7.0\Locadora.Infra.dll
+C:\dev\Locadora\Locadora.Infra\obj\Debug\net7.0\refint\Locadora.Infra.dll
+C:\dev\Locadora\Locadora.Infra\obj\Debug\net7.0\Locadora.Infra.pdb
+C:\dev\Locadora\Locadora.Infra\obj\Debug\net7.0\ref\Locadora.Infra.dll

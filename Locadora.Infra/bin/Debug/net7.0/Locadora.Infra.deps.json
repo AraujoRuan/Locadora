@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Locadora.Infra/1.0.0": {
+        "dependencies": {
+          "Locadora.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Locadora.Infra.dll": {}
+        }
+      },
+      "Locadora.Domain/1.0.0": {
+        "runtime": {
+          "Locadora.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Locadora.Infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Locadora.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
