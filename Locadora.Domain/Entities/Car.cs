@@ -1,19 +1,18 @@
+using Locadora.Domain.ValueObjects;
+
 namespace Locadora.Domain.Entities;
 
 public class Car : Entity
 {
- 
-    public Car( string color, string plate, string model)
+    public Car(Color _color, Plate _plate, Model _model)
     {
-       
-        Color = color;
-        Plate = plate;
-        Model = model;
+        color = _color;
+        plate = _plate;
+        model = _model;
     }
 
-    public string Color { get; private set; }
-    public string Plate { get; private set; }
-    public string Model { get; private set; }
+    public Color color { get; private set; }
+    public Plate plate { get; private set; }
+    public Model model { get; private set; }
     public DateTime Year { get; private set; }
 }
-

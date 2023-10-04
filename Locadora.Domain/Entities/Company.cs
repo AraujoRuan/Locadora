@@ -4,19 +4,18 @@ namespace Locadora.Domain.Entities;
 
 public class Company : Entity
 {
-    public Company(Name _name, int cNPJ, string address, int phone, string email)
+    public Company(Name _name, Cnpj _cnpj, Address _address, Phone _phone, Email _email)
     {
         name = _name;
-        CNPJ = cNPJ;
-        Address = address;
-        Phone = phone;
-        Email = email;
+        cnpj = _cnpj;
+        address = _address;
+        phone = _phone;
+        email = _email;
     }
 
     public Name name { get; private set; }
-    public int CNPJ { get; private set; }
-    public string Address { get; private set; }
-    public int Phone { get; private set; }
-    public string Email { get; private set; }
-    
+    public Cnpj cnpj { get; private set; }
+    public Address address { get; private set; }
+    public Phone phone { get; private set; }
+    public Email email { get; private set; }
 }

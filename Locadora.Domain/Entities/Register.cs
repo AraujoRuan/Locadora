@@ -1,21 +1,23 @@
+using Locadora.Domain.ValueObjects;
+
 namespace Locadora.Domain.Entities;
 
 public class Register : Entity
 {
 
-    public Register(string name, string cPF, string address, string email, string phone)
+    public Register(Name _name, Cpf _cpf, Address _address, Email _email, Phone _phone)
     {
-        Name = name;
-        CPF = cPF;
-        Address = address;
-        Email = email;
-        this.Phone = phone;
+        name = _name;
+        cpf = _cpf;
+        address = _address;
+        email = _email;
+        phone = _phone;
     }
 
-    public string Name { get; private set; }
-    public string CPF { get; private set; }
-    public string Address { get; private set; }
-    public string Email { get; private set; }
-    public string Phone { get; private set; }
+    public Name name { get; private set; }
+    public Cpf cpf { get; private set; }
+    public Address address { get; private set; }
+    public Email email { get; private set; }
+    public Phone phone { get; private set; }
     public DateTime Year { get; private set; }
 }

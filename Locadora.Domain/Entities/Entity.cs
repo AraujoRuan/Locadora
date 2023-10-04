@@ -1,11 +1,11 @@
 namespace Locadora.Domain.Entities;
 
-public class Entity
+public class Entity : IEquatable<Entity>
 {
-    public Entity()
-    {
-        Id = Guid.NewGuid();
-    }
-    public Guid Id { get; private set; }
+    public Guid Id { get; private set; } = Guid.NewGuid();
 
+    public bool Equals(Entity? other)
+    {
+        throw new NotImplementedException();
+    }
 }
