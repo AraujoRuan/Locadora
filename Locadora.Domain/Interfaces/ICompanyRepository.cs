@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Locadora.Domain.Entities;
 
 namespace Locadora.Domain.Interfaces
 {
-    internal class ICompanyRepository
+    public interface ICompanyRepository
     {
+        Task<IEnumerable<Company>> GetCompanyAsync();
+        Task<Company> GetCompanyIdAsync(int id);
+        Task<IEnumerable<Company>> GetCompanyNameAsync(string companyName);
+        Task<Company> CreateCompanyAsync(Company company);
+        Task<Company> UpdateCompanyAsync(Company company);
+        Task<Company> DeleteCompanyAsync(Company company);
     }
 }

@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Locadora.Domain.Entities;
 
 namespace Locadora.Domain.Interfaces
 {
-    internal class IRegisterRepository
+    public interface IRegisterRepository
     {
+        Task<IEnumerable<Register>> GetRegisterAsync();
+        Task<Register> GetRegisterIdAsync(int id);
+        Task<IEnumerable<Register>> GetRegisterNameAsync(string registerName);
+        Task<Register> CreateRegisterAsync(Register register);
+        Task<Register> UpdateRegisterAsync(Register register);
+        Task<Register> DeleteRegisterAsync(Register register);
     }
 }
