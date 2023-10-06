@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZZsUksjcgsEdFCYdOwLnH2pOocWwiUI5a8cFygsS7JpoHY/3CsZ4ttRWMEST8oU0W0YNRV/9TLBn69F6Dh1xsQ==",
+  "dgSpecHash": "vRApewU3avWRNDn612ynXFjwyaTytmWiYONEeQN6cNYX/HLpYcMfed+wODY3pT6kkcvh1yWg5BnyQAdBk9wyQQ==",
   "success": true,
-  "projectFilePath": "C:\\dev\\Locadora\\Locadora.Test\\Locadora.Test.csproj",
+  "projectFilePath": "c:\\dev\\Locadora\\Locadora.Test\\Locadora.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ruan_\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\ruan_\\.nuget\\packages\\microsoft.codecoverage\\17.7.1\\microsoft.codecoverage.17.7.1.nupkg.sha512",
