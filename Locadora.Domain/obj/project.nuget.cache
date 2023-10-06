@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "80nCiBHuJ6RjmZhLwTDpfho6sX49t4okMVXhN7puL17zd4tafys0y/uxHHJiH/qv1AuOr/q2uo69YdZTlzju9Q==",
+  "dgSpecHash": "4SRNEO0AvsK0tFHwWhxnYK7SL1B4SLui7uXv14hOIjqBrIVNCTcf6jMZ8J333pUNNFi4JdoKRM4hTcm2CS0zCg==",
   "success": true,
-  "projectFilePath": "c:\\dev\\Locadora\\Locadora.Domain\\Locadora.Domain.csproj",
+  "projectFilePath": "C:\\dev\\Locadora\\Locadora.Domain\\Locadora.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

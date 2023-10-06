@@ -1,6 +1,6 @@
 namespace Locadora.Domain.Entities;
 
-public class Entity : IEquatable<Entity>
+public abstract class Entity : IEquatable<Entity> 
 {
     public Guid Id { get; private set; } = Guid.NewGuid();
 
