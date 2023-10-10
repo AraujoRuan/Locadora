@@ -12,13 +12,21 @@ namespace Locadora.Domain.ValueObjects
         public string State { get; private set; }
         public string ZipCode { get; private set; }
 
-        public Address(string street, string number, string complement, string district, string city, string state, string zipCode)
+        public Address(string street, string number, string complement, string district, string city, string state,
+            string zipCode)
         {
             if (string.IsNullOrEmpty(street)) throw new DomainExceptionValidation("Só pode Conter nome de Rua");
             Street = street;
             if (string.IsNullOrEmpty(number)) throw new DomainExceptionValidation("Só pode conter numeros");
             Number = number;
-            if (string.IsNullOrEmpty(complement)) throw new DomainExceptionValidation("Só pode conter casa ou  Apartamento");
+            if (!string.IsNullOrEmpty(complement))
+            {
+                if (complement.IndexOf("casa") > 0 || complement.IndexOf("ap") > 0)
+                {
+                    throw new DomainExceptionValidation("Só pode conter casa ou Apartamento(ap)");
+                }
+            }
+
             Complement = complement;
             if (string.IsNullOrEmpty(district)) throw new DomainExceptionValidation("Só pode conter Distrito");
             District = district;
@@ -29,7 +37,26 @@ namespace Locadora.Domain.ValueObjects
             if (string.IsNullOrEmpty(zipCode)) throw new DomainExceptionValidation("Só pode Conter CEP");
             ZipCode = zipCode;
         }
+
         public static implicit operator string(Address address) => address.ToString();
-        public static implicit operator Address(string street) => new Address(street);
+
+        public static implicit operator Address(string adress)
+        {
+            // adressComplete = "Rua One,12,,Bairro,RJ,SP,021"
+            string[] adressComplete = adress.Split(",");
+            string street = adressComplete[0];
+            string number = adressComplete[1];
+            string complement = adressComplete[2];
+            string district = adressComplete[3];
+            string city = adressComplete[4];
+            string state = adressComplete[5];
+            string zipCode = adressComplete[6];
+
+            return new Address(street, number, complement, district, city, state, zipCode);
+        }
+
+        public override string ToString() => $"{Street} {Number} { Complement} {District} {City} { State} {ZipCode} ";
+        
+
     }
 }
