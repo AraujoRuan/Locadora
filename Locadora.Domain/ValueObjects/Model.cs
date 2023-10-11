@@ -8,7 +8,12 @@ namespace Locadora.Domain.ValueObjects;
     public Model(string fullName)
     {
         if (string.IsNullOrEmpty(fullName)) throw new DomainExceptionValidation(" O nome do modelo carro não pode ser vazio");
-         Fullname = fullName;
+
+        if (fullName.Trim().Length < 2 || fullName.Length > 100) throw new DomainExceptionValidation("O modelo do carro deve conter entre 2 e 100 caracteres");
+
+        if (fullName.Trim().Any(ch => char.IsPunctuation(ch))) throw new DomainExceptionValidation("o modelo do caro não deve conter caracter especial");
+
+        Fullname = fullName;
     }
 
     public static implicit operator string(Model model) => model.ToString();

@@ -11,6 +11,8 @@ namespace Locadora.Domain.ValueObjects
             if (string.IsNullOrEmpty(number)) throw new DomainExceptionValidation("Digite o numero");
             Number = number;
         }
+        private Cnpj() { }
+
         public static implicit operator string(Cnpj cnpj) => cnpj.ToString();
         public static implicit operator Cnpj(string number) => new Cnpj(number);
 
