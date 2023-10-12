@@ -9,3 +9,4 @@ c:\dev\Locadora\Locadora.Domain\obj\Debug\net7.0\Locadora.Domain.dll
 c:\dev\Locadora\Locadora.Domain\obj\Debug\net7.0\refint\Locadora.Domain.dll
 c:\dev\Locadora\Locadora.Domain\obj\Debug\net7.0\Locadora.Domain.pdb
 c:\dev\Locadora\Locadora.Domain\obj\Debug\net7.0\ref\Locadora.Domain.dll
+C:\dev\Locadora\Locadora.Domain\obj\Debug\net7.0\Locadora.Domain.csproj.AssemblyReference.cache

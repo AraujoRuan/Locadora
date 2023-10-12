@@ -3,21 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locadora.Domain", "Locadora.Domain\Locadora.Domain.csproj", "{760E79F6-F310-4C6A-8D0F-A49F957D134C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Locadora.Domain", "Locadora.Domain\Locadora.Domain.csproj", "{760E79F6-F310-4C6A-8D0F-A49F957D134C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locadora.Api", "Locadora.Api\Locadora.Api.csproj", "{A9A0172E-F85F-4F03-BA22-94239B99DB17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Locadora.Api", "Locadora.Api\Locadora.Api.csproj", "{A9A0172E-F85F-4F03-BA22-94239B99DB17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locadora.Infra", "Locadora.Infra\Locadora.Infra.csproj", "{13BE0661-2F68-4345-9B09-B9807765A7D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Locadora.Infra", "Locadora.Infra\Locadora.Infra.csproj", "{13BE0661-2F68-4345-9B09-B9807765A7D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locadora.Test", "Locadora.Test\Locadora.Test.csproj", "{F404AB08-FF00-450D-8DE5-D93FAD5823AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Locadora.Test", "Locadora.Test\Locadora.Test.csproj", "{F404AB08-FF00-450D-8DE5-D93FAD5823AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{B7F996C4-7795-4A29-9105-138946A6B9FD}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{760E79F6-F310-4C6A-8D0F-A49F957D134C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -36,5 +38,11 @@ Global
 		{F404AB08-FF00-450D-8DE5-D93FAD5823AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F404AB08-FF00-450D-8DE5-D93FAD5823AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F404AB08-FF00-450D-8DE5-D93FAD5823AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E7CBB00-E836-4AAE-B57A-29840EDE1E2D}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,27 @@
+version: '3.4'
+services:
+  # locadora:
+  #   image: ${DOCKER_REGISTRY-}locadora
+  #   container_name: locadora
+  #   build:
+  #     context: .
+  #     dockerfile: Locadora.Api/Dockerfile
+  #   depends_on: 
+  #     - sqlserver
+  #   ports:
+  #     - "8090:8090"
+  #   restart: always
+  #   environment: 
+  #     - DBHOST=database
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - SA_PASSWORD=yourpassword@2023
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./sqlserver_data:/var/opt/mssql/data
+volumes:
+  sqlserver_data:
