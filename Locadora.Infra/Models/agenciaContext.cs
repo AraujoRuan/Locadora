@@ -2,108 +2,25 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using Locadora.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Locadora.Infra.Models;
 
-public partial class agenciaContext : DbContext
+public partial class AgenciaContext : DbContext
 {
-    public agenciaContext(DbContextOptions<agenciaContext> options)
+    public AgenciaContext()
+    {
+    }
+
+    public AgenciaContext(DbContextOptions<AgenciaContext> options)
         : base(options)
     {
     }
 
-    public virtual DbSet<Car> Car { get; set; }
+    public virtual DbSet<Car> Cars { get; set; }
 
-    public virtual DbSet<Company> Company { get; set; }
+    public virtual DbSet<Company> Companies { get; set; }
 
-    public virtual DbSet<Register> Register { get; set; }
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<Car>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__car__3214EC07B7C2AFFF");
-
-            entity.ToTable("car");
-
-            entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.Color)
-                .IsRequired()
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Model)
-                .IsRequired()
-                .HasMaxLength(50);
-            entity.Property(e => e.Plate)
-                .IsRequired()
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Year).HasColumnType("datetime");
-        });
-
-        modelBuilder.Entity<Company>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__Company__3214EC07F1432AAA");
-
-            entity.HasIndex(e => e.Id, "Id");
-
-            entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.Address)
-                .IsRequired()
-                .HasMaxLength(150)
-                .IsUnicode(false);
-            entity.Property(e => e.Cnpj)
-                .IsRequired()
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Email)
-                .IsRequired()
-                .HasMaxLength(160)
-                .IsUnicode(false)
-                .HasColumnName("email");
-            entity.Property(e => e.Name)
-                .IsRequired()
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Phone)
-                .IsRequired()
-                .HasMaxLength(13)
-                .IsUnicode(false);
-        });
-
-        modelBuilder.Entity<Register>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__Register__3214EC07FF1FF1F0");
-
-            entity.HasIndex(e => e.Id, "Id");
-
-            entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.Address)
-                .IsRequired()
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Cpf)
-                .IsRequired()
-                .HasMaxLength(11)
-                .IsUnicode(false);
-            entity.Property(e => e.Email)
-                .IsRequired()
-                .HasMaxLength(160)
-                .IsUnicode(false);
-            entity.Property(e => e.Name)
-                .IsRequired()
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Phone)
-                .IsRequired()
-                .HasMaxLength(13)
-                .IsUnicode(false);
-            entity.Property(e => e.Year).HasColumnType("datetime");
-        });
-
-        OnModelCreatingPartial(modelBuilder);
-    }
-
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    public virtual DbSet<Register> Registers { get; set; }
 }

@@ -1,3 +1,7 @@
+using Locadora.Infra.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +11,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.WebHost.UseUrls("http://0.0.0.0:8090");
+
+IConfiguration configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .Build();
+
+
+builder.Services.AddSingleton<IConfiguration>(configuration);
+
+builder.Services.AddDbContext<AgenciaContext>(
+    context => context.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
+);
 
 var app = builder.Build();
 

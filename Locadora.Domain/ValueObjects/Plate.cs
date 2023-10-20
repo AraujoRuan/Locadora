@@ -13,7 +13,7 @@ namespace Locadora.Domain.ValueObjects
         public Plate(string number)
         {
             if (string.IsNullOrEmpty(number)) throw new DomainExceptionValidation(" A placa do carro não pode ser vazio");
-            if (number.Trim().Length == 7) throw new DomainExceptionValidation("A placa tem conter 7 caracter");
+            if (number.Trim().Length < 7) throw new DomainExceptionValidation("A placa tem conter 7 caracter");
             if (number.Trim().Any(ch => char.IsPunctuation(ch))) throw new DomainExceptionValidation("A placa não pode conter caracter especial");
             Number = number.Trim();
 
