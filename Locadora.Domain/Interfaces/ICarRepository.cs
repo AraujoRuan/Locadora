@@ -5,7 +5,7 @@ namespace Locadora.Domain.Interfaces
 {
     public interface ICarRepository
     {
-        Task<List<Company>> GetCompanysAsync();
+        Task<IEnumerable<Company>> GetCompanysAsync();
         Task<Car> GetCarIdAsync(int id);
         Task<IEnumerable<Car>>GetCarsByNameAsync(string carName);
         Task<Car> CreateCarAsync(Car car);

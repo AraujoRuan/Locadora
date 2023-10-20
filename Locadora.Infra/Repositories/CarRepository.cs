@@ -13,15 +13,12 @@ namespace Locadora.Infra.Repositories;
         {
             _context = context;
         }
+ 
+        public async Task<IEnumerable<Company>> GetCompanysAsync() => await _context.Companies.Include(x =>x.cnpj).AsNoTracking().ToListAsync();
 
-        public  Task<List<Company>> GetCompanysAsync()
+    public Task<Car> GetCarIdAsync(int id)
         {
-            return _context.Companies.ToListAsync();
-        }
-
-        public Task<Car> GetCarIdAsync(int id)
-        {
-            return _context.Cars.GetCarIdAsync(id);
+            return _carRepositoryImplementation.GetCarIdAsync(id);
         }
 
         public Task<IEnumerable<Car>> GetCarsByNameAsync(string carName)
