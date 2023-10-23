@@ -4,7 +4,7 @@ namespace Locadora.Domain.Interfaces
 {
     public interface IRegisterRepository
     {
-        Task<IEnumerable<Register>> GetRegistersAsync();
+        Task<IEnumerable<Register>> GetAllRegistersAsync();
         Task<Register> GetRegisterIdAsync(int id);
         Task<IEnumerable<Register>> GetRegistersNameAsync(string registersName);
         Task<Register> CreateRegisterAsync(Register register);
