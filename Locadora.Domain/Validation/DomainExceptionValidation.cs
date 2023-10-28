@@ -9,6 +9,9 @@ public class DomainExceptionValidation : Exception
 
     public static void HasError(bool HasError, string error)
     {
-        if (HasError) throw new DomainExceptionValidation(error);
+        if (HasError)
+        {
+            Console.WriteLine(error);
+        }
     }
 }

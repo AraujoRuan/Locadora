@@ -10,6 +10,7 @@ public class Car : Entity
         color = _color;
         plate = _plate;
         model = _model;
+        Isvalid = true;
     }
 
     public Name name { get; private set; }
@@ -17,4 +18,5 @@ public class Car : Entity
     public Plate plate { get; private set; }
     public Model model { get; private set; }
     public DateTime Year { get; private set; }
+    public bool Isvalid { get; set; }
 }
