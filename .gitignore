@@ -1,17 +1,36 @@
-**/.vs
-**/.vscode
-**/obj
-**/bin
-/Locadora.Domain/obj/Debug/net7.0/Locadora.Domain.assets.cache
-/Locadora.Domain/obj/Debug/net7.0/Locadora.Domain.GeneratedMSBuildEditorConfig.editorconfig
-/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.assets.cache
-/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.csproj.AssemblyReference.cache
-/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.csproj.CoreCompileInputs.cache
-/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.csproj.FileListAbsolute.txt
-/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.dll
-/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.GeneratedMSBuildEditorConfig.editorconfig
-/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.pdb
-/Locadora.Infra/obj/Locadora.Infra.csproj.nuget.dgspec.json
-/Locadora.Infra/obj/Locadora.Infra.csproj.nuget.g.props
-/Locadora.Infra/obj/project.assets.json
-/Locadora.Infra/obj/project.nuget.cache
+// Ignone obj and bin folders
+**/obj/*
+**/bin/*
+// Ignore the .git folder
+**/.git/*
+// Ignore NuGet Packages
+**/packages/*
+!**/packages/repositories.config
+// Ignore the node_modules folder
+**/node_modules/*
+// Ignore the build folder
+**/build/*
+// Ignore the bower_components folder
+**/bower_components/*
+// Ignore the jspm_packages folder
+**/jspm_packages/*
+// Ignore the .sass-cache folder
+**/.sass-cache/*
+// Ignore the .nuget folder
+**/.nuget/*
+// Ignore the .vs folder
+**/.vs/*
+// Ignore .DS_Store files everywhere
+**/.DS_Store
+// Ignore the .idea folder
+**/.idea/*
+// Ignore the .vscode folder
+**/.vscode/*
+// Ignore the .suo file
+**/*.suo
+// Ignore the .user file
+**/*.user
+// Ignore the .cache file
+**/*.cache
+// Ignore the .log file
+**/*.log
