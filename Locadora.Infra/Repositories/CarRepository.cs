@@ -16,7 +16,7 @@ namespace Locadora.Infra.Repositories;
         }
  
         public async Task<IEnumerable<Car>> GetCarsCompanysAsync() => await _context.Cars.Include(x =>x.name).AsNoTracking().ToListAsync();
-        public async Task<Car> GetCarCompanysAsync(int id) => await _context.Cars.Include(x => x.name).AsNoTracking().SingleOrDefaultAsync(x => x.Id == id) ?? throw new DomainExceptionValidation($"Car cannot be found by id - {id}");
+        public async Task<Car> GetCarCompanysAsync(Guid id) => await _context.Cars.Include(x => x.name).AsNoTracking().SingleOrDefaultAsync(x => x.Id == id) ?? throw new DomainExceptionValidation($"Car cannot be found by id - {id}");
 
         public async Task<IEnumerable<Car>> GetCarsCompanysByNameAsync(string carName)
         {
