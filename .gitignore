@@ -34,3 +34,14 @@
 **/*.cache
 // Ignore the .log file
 **/*.log
+**/*.dll
+**/*.exe
+**/*.pdb
+/Locadora.Test/bin/*
+/Locadora.Test/obj/*
+/Locadora.Domain/obj/Debug/net7.0/Locadora.Domain.csproj.FileListAbsolute.txt
+/Locadora.Test/obj/Debug/net7.0/Locadora.Test.csproj.CoreCompileInputs.cache
+/Locadora.Test/obj/Debug/net7.0/Locadora.Test.csproj.FileListAbsolute.txt
+/Locadora.Test/obj/Debug/net7.0/Locadora.Test.dll
+/Locadora.Test/obj/Debug/net7.0/Locadora.Test.genruntimeconfig.cache
+/Locadora.Test/obj/Debug/net7.0/Locadora.Test.pdb
