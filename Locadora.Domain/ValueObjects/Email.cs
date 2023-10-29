@@ -1,8 +1,10 @@
-﻿using System.Security;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Security;
 using System.Text.RegularExpressions;
 
 namespace Locadora.Domain.ValueObjects
 {
+    [NotMapped]
     public class Email : ValueObject
     {
         const string Pattern = @"\w+@\w+\.\w+";

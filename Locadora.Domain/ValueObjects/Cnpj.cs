@@ -2,10 +2,10 @@
 
 namespace Locadora.Domain.ValueObjects
 {
+    
     public class Cnpj :ValueObject
     {
         public string Number { get; private set; }
-
         public Cnpj(string number)
         {
             if (string.IsNullOrEmpty(number)) throw new DomainExceptionValidation("Digite o numero");

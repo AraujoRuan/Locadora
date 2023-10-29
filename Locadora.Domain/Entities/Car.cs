@@ -13,6 +13,11 @@ public class Car : Entity
         Isvalid = true;
     }
 
+    public Car()
+    {
+    }
+
+
     public Name name { get; private set; }
     public Color color { get; private set; }
     public Plate plate { get; private set; }

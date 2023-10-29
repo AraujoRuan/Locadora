@@ -1,9 +1,11 @@
 ﻿using Locadora.Domain.Validation;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Net;
 using System.Text.RegularExpressions;
 
 namespace Locadora.Domain.ValueObjects
 {
+    [NotMapped]
     public class Phone : ValueObject
     {
         const string Pattern = @"\w+@\w+\.\w+";

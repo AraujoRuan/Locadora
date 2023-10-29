@@ -1,9 +1,11 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using Locadora.Domain.Validation;
 
 namespace Locadora.Domain.ValueObjects
 {
+    [NotMapped]
     public class Plate : ValueObject
     {
         public string Number { get; private set; }

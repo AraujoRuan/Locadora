@@ -1,7 +1,10 @@
 using Locadora.Domain.ValueObjects;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Locadora.Domain.Entities;
 
+[NotMapped]
 public class Company : Entity
 {
     public Company(Name _name, Cnpj _cnpj, Address _address, Phone _phone, Email _email)
@@ -11,6 +14,10 @@ public class Company : Entity
         address = _address;
         phone = _phone;
         email = _email;
+    }
+
+    public Company()
+    {
     }
 
     public Name name { get; private set; }

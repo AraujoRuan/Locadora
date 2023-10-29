@@ -4,7 +4,6 @@ namespace Locadora.Domain.Entities;
 
 public class Register : Entity
 {
-
     public Register(Name _name, Cpf _cpf, Address _address, Email _email, Phone _phone)
     {
         name = _name;
@@ -12,6 +11,10 @@ public class Register : Entity
         address = _address;
         email = _email;
         phone = _phone;
+    }
+
+    public Register()
+    {
     }
 
     public Name name { get; private set; }

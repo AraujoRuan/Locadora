@@ -1,9 +1,13 @@
-﻿using Locadora.Domain.Validation;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Locadora.Domain.Validation;
 
 namespace Locadora.Domain.ValueObjects
 {
+    [NotMapped]
     public class Address : ValueObject
     {
+        [Key] public int Id { get; protected set; }
         public string Street { get; private set; }
         public string Number { get; private set; }
         public string Complement { get; private set; }
@@ -11,6 +15,10 @@ namespace Locadora.Domain.ValueObjects
         public string City { get; private set; }
         public string State { get; private set; }
         public string ZipCode { get; private set; }
+
+        public Address()
+        {
+        }
 
         public Address(string street, string number, string complement, string district, string city, string state,
             string zipCode)
@@ -55,8 +63,6 @@ namespace Locadora.Domain.ValueObjects
             return new Address(street, number, complement, district, city, state, zipCode);
         }
 
-        public override string ToString() => $"{Street} {Number} { Complement} {District} {City} { State} {ZipCode} ";
-        
-
+        public override string ToString() => $"{Street} {Number} {Complement} {District} {City} {State} {ZipCode} ";
     }
 }

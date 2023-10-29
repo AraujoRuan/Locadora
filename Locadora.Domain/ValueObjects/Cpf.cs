@@ -1,11 +1,17 @@
 ﻿using Locadora.Domain.Validation;
 using Microsoft.IdentityModel.Tokens;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Locadora.Domain.ValueObjects
 {
+    [NotMapped]
     public class Cpf : ValueObject
     {
         public string _cpf { get; private set; }
+
+        public Cpf()
+        {
+        }
 
         public Cpf(string cpf)
         {
@@ -18,8 +24,10 @@ namespace Locadora.Domain.ValueObjects
             {
                 throw new DomainExceptionValidation("Digite um cpf válido");
             }
+
             _cpf = cpf;
         }
+
         private bool checkCpf(string cpf)
         {
             if (string.IsNullOrEmpty(cpf))
