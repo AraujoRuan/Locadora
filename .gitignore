@@ -2,3 +2,16 @@
 **/.vscode
 **/obj
 **/bin
+/Locadora.Domain/obj/Debug/net7.0/Locadora.Domain.assets.cache
+/Locadora.Domain/obj/Debug/net7.0/Locadora.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.assets.cache
+/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.csproj.AssemblyReference.cache
+/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.csproj.CoreCompileInputs.cache
+/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.csproj.FileListAbsolute.txt
+/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.dll
+/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.GeneratedMSBuildEditorConfig.editorconfig
+/Locadora.Infra/obj/Debug/net7.0/Locadora.Infra.pdb
+/Locadora.Infra/obj/Locadora.Infra.csproj.nuget.dgspec.json
+/Locadora.Infra/obj/Locadora.Infra.csproj.nuget.g.props
+/Locadora.Infra/obj/project.assets.json
+/Locadora.Infra/obj/project.nuget.cache
