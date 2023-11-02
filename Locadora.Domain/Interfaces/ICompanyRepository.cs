@@ -5,7 +5,7 @@ namespace Locadora.Domain.Interfaces
     public interface ICompanyRepository
     {
         Task<IEnumerable<Company>> GetCompanysCarsAsync();
-        Task<Company> GetCompanyCarsByIdAsync(int id);
+        Task<Company> GetCompanyCarsByIdAsync(Guid id);
         Task<IEnumerable<Company>> GetCompanysCarsByNameAsync(string companyName);
         Task<Company> CreateCompanyAsync(Company company);
         Task<Company> UpdateCompanyAsync(Company company);

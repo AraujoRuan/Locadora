@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Locadora.Domain.ValueObjects;
 
-[NotMapped]
 public class Model : ValueObject
 {
     public string Fullname { get; private set; }

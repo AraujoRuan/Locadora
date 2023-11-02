@@ -1,8 +1,7 @@
 ﻿using Locadora.Domain.Validation;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Locadora.Domain.ValueObjects;
-[NotMapped]
+
 public class Color : ValueObject
 {
     public string Cor { get; private set; }

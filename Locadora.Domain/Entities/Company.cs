@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Locadora.Domain.Entities;
 
-[NotMapped]
+
 public class Company : Entity
 {
     public Company(Name _name, Cnpj _cnpj, Address _address, Phone _phone, Email _email)

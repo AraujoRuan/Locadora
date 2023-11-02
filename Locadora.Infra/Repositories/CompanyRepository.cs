@@ -19,7 +19,7 @@ namespace Locadora.Infra.Repositories
 
         public async Task<IEnumerable<Company>> GetCompanysCarsAsync() => await _context.Companies.Include(x => x.name).AsNoTracking().ToListAsync();
         
-        public async Task<Company> GetCompanyCarsByIdAsync(int id) => await _context.Companies.Include(X => X.name).AsNoTracking().SingleOrDefaultAsync(X => X.Id == id) ?? throw new DomainExceptionValidation($"Company cannot be found by id - {id}");
+        public async Task<Company> GetCompanyCarsByIdAsync(Guid id) => await _context.Companies.Include(X => X.name).AsNoTracking().SingleOrDefaultAsync(X => X.Id == id) ?? throw new DomainExceptionValidation($"Company cannot be found by id - {id}");
 
         public async Task<IEnumerable<Company>> GetCompanysCarsByNameAsync(string companyName)
         {

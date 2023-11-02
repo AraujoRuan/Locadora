@@ -10,12 +10,12 @@ namespace Locadora.Test.Entities
 
         public CarTests()
         {
-            var name = new Name("Ford", "Mustang");
+            var brand = new Brand("Ford");
             var color = new Color("Red");
             var plate = new Plate("kLM1111");
-            var model = new Model("Primeira Geração");
+            var model = new Model("Fiesta");
             var year =new DateTime(1970);
-            _car = new Car(name, color, plate, model);
+            _car = new Car(brand,color, plate, model);
 
         }
 

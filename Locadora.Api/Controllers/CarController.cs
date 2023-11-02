@@ -1,9 +1,6 @@
-﻿using System.Reflection.Metadata.Ecma335;
-using System.Text.Json;
-using Locadora.Domain.Entities;
+﻿using Locadora.Domain.Entities;
 using Locadora.Infra.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace Locadora.Api.Controllers
 {
@@ -11,7 +8,7 @@ namespace Locadora.Api.Controllers
     [Route("/car")]
     public class CarController : Controller
     {
-        protected AgenciaContext _agenciaContext;
+        private AgenciaContext _agenciaContext;
         public CarController(AgenciaContext dbContext)
         {
             _agenciaContext = dbContext;
@@ -27,7 +24,7 @@ namespace Locadora.Api.Controllers
         [Route("postCar")]
         public IActionResult PostCars(Car model)
         {
-            Car _car = new Car(model.name, model.color, model.plate, model.model);
+            Car _car = new Car(model.brand, model.color, model.plate, model.model);
             _agenciaContext.SaveChanges();
             return new JsonResult(_car);
         }

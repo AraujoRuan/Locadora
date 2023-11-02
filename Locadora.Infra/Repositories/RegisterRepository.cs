@@ -24,7 +24,7 @@ namespace Locadora.Infra.Repositories
             => await _context.Registers.Include(x => x.name).
                 Include(x => x.email).AsNoTracking().ToListAsync();
 
-        public async Task<Register> GetRegisterIdAsync(int id)
+        public async Task<Register> GetRegisterIdAsync(Guid id)
             => await _context.Registers.Include(x => x.name)
                    .Include(x => x.email)
                    .FirstOrDefaultAsync(x => x.Id == id) ??
