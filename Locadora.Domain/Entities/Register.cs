@@ -1,26 +1,14 @@
-using Locadora.Domain.ValueObjects;
+﻿using BaltaStore.Shared.Entities;
 
-namespace Locadora.Domain.Entities;
-
-public class Register : Entity
+namespace Locadora.Domain.Entities
 {
-    public Register(Name _name, Cpf _cpf, Address _address, Email _email, Phone _phone)
+    public class Register : Entity
     {
-        name = _name;
-        cpf = _cpf;
-        address = _address;
-        email = _email;
-        phone = _phone;
+        public string Name { get; private set; }
+        public string Cpf { get; private set; }
+        public string Address { get; private set; }
+        public string Email { get; private set; }
+        public string Phone { get; private set; }
+        public DateTime Year { get; private set; }
     }
-
-    public Register()
-    {
-    }
-
-    public Name name { get; private set; }
-    public Cpf cpf { get; private set; }
-    public Address address { get; private set; }
-    public Email email { get; private set; }
-    public Phone phone { get; private set; }
-    public DateTime Year { get; private set; }
 }

@@ -1,16 +1,12 @@
-namespace Locadora.Domain.Entities;
-
-public abstract class Entity : IEquatable<Entity>
+﻿namespace BaltaStore.Shared.Entities
 {
-    public Entity()
+    public abstract class Entity 
     {
-        Id = Guid.NewGuid();
-    }
+        public Entity()
+        {
+            Id = Guid.NewGuid();
+        }
 
-    public Guid Id { get; private set; }
-
-    public bool Equals(Entity other)
-    {
-        return Id == other.Id;
+        public Guid Id { get; private set; }
     }
 }

@@ -1,29 +1,18 @@
-using System.ComponentModel.DataAnnotations.Schema;
-using Locadora.Domain.ValueObjects;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using BaltaStore.Shared.Entities;
 
-namespace Locadora.Domain.Entities;
-
-[Table("Car")]
-public class Car : Entity
+namespace Locadora.Domain.Entities
 {
-    public Car(Brand _brand, Color _color, Plate _plate, Model _model)
+    public class Car : Entity
     {
-        brand = _brand;
-        color = _color;
-        plate = _plate;
-        model = _model;
-        
+        public string Brand { get; private set; }
+        public string Plate { get; private set; }
+        public string Model { get; private set; }
+        public string Color { get; private set; }
+        public DateTime year { get; private set; }
     }
-
-    public Car()
-    {
-    }
-
-    public Guid Id { get; private set; }
-    public Brand brand { get; private set; }
-    public Color color { get; private set; }
-    public Plate plate { get; private set; }
-    public Model model { get; private set; }
-    public DateTime Year { get; private set; }
-
 }

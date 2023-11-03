@@ -1,28 +1,14 @@
-using Locadora.Domain.ValueObjects;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using BaltaStore.Shared.Entities;
 
-namespace Locadora.Domain.Entities;
-
-
-public class Company : Entity
+namespace Locadora.Domain.Entities
 {
-    public Company(Name _name, Cnpj _cnpj, Address _address, Phone _phone, Email _email)
+    public class Company : Entity
     {
-        name = _name;
-        cnpj = _cnpj;
-        address = _address;
-        phone = _phone;
-        email = _email;
-    }
+        public string Name { get; private set; }
+        public string Cnpj { get; private set; }
+        public string Address{ get; private set; }
+        public string Phone { get; private set; }
+        public string Email { get; private set; }
 
-    public Company()
-    {
     }
-
-    public Name name { get; private set; }
-    public Cnpj cnpj { get; private set; }
-    public Address address { get; private set; }
-    public Phone phone { get; private set; }
-    public Email email { get; private set; }
 }
