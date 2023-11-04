@@ -1,15 +1,16 @@
 ﻿using Locadora.Domain.Entities;
 using Locadora.Domain.Interfaces;
-using Locadora.Domain.Queries;
 using Locadora.Infra.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Locadora.Infra.Repositories
 {
     public class CarRepository : ICarRepository
     {
         private readonly AgenciaContext _context;
-
+      
+        
         public CarRepository(AgenciaContext context)
         {
             _context = context;
@@ -29,7 +30,8 @@ namespace Locadora.Infra.Repositories
 
         public IEnumerable<Car> Get(string car)
         {
-            return _context.Cars.AsNoTracking().Where(CarQueries.Get(car)).OrderBy(x => x.year);
+            var cars = _context.Cars.Include(car).ToList();
+            return cars;
         }
 
         public Car GetBayId(Guid id, string brand)
