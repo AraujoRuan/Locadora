@@ -9,6 +9,7 @@ namespace Locadora.Domain.Entities
 {
     public class Car : Entity
     {
+        
         public string Brand { get; private set; }
         public string Plate { get; private set; }
         public string Model { get; private set; }
