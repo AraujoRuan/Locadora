@@ -16,24 +16,25 @@
    "T4TemplatePath": null,
    "Tables": [
       {
-         "Name": "[dbo].[Car]",
+         "Name": "[dbo].[Cars]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Company]",
+         "Name": "[dbo].[Companys]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Register]",
+         "Name": "[dbo].[Registers]",
          "ObjectType": 0
       }
    ],
-   "UiHint": "d29bac8c8025.agencia.dbo",
+   "UiHint": "d29bac8c8025.Agencia.dbo",
    "UncountableWords": null,
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": true,
    "UseDateOnlyTimeOnly": false,
    "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
    "UseFluentApiOnly": true,
    "UseHandleBars": false,
    "UseHierarchyId": false,
@@ -41,6 +42,7 @@
    "UseLegacyPluralizer": false,
    "UseManyToManyEntity": false,
    "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
    "UseNoObjectFilter": false,
    "UseNodaTime": false,
    "UseNullableReferences": false,

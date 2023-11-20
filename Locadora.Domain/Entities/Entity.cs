@@ -1,6 +1,6 @@
 ﻿namespace BaltaStore.Shared.Entities
 {
-    public abstract class Entity 
+    public abstract class Entity
     {
         public Entity()
         {

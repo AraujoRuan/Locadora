@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BaltaStore.Shared.Entities;
+﻿using BaltaStore.Shared.Entities;
 
 namespace Locadora.Domain.Entities
 {
@@ -22,5 +17,6 @@ namespace Locadora.Domain.Entities
         public string Model { get; private set; }
         public string Color { get; private set; }
         public DateTime year { get; private set; }
+
     }
 }

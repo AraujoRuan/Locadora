@@ -1,16 +1,15 @@
-﻿using Locadora.Domain.Entities;
-using Locadora.Domain.Interfaces;
+﻿using Locadora.Infra.Interfaces;
 using Locadora.Infra.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
+using Car = Locadora.Infra.Models.Car;
 
 namespace Locadora.Infra.Repositories
 {
     public class CarRepository : ICarRepository
     {
         private readonly AgenciaContext _context;
-      
-        
+
+
         public CarRepository(AgenciaContext context)
         {
             _context = context;
@@ -22,21 +21,21 @@ namespace Locadora.Infra.Repositories
             _context.SaveChanges();
         }
 
-        public void DeleteBayId(Car car)
+        public void DeleteById(Car car)
         {
             _context.Cars.Remove(car);
             _context.SaveChanges();
         }
 
-        public IEnumerable<Car> Get(string car)
+        public IEnumerable<Car> Get()
         {
-            var cars = _context.Cars.Include(car).ToList();
+            var cars = _context.Cars.ToList();
             return cars;
         }
 
-        public Car GetBayId(Guid id, string brand)
+        public Car GetById(Guid id)
         {
-            return _context.Cars.FirstOrDefault(x => x.Id == id && x.Brand == brand);
+            return _context.Cars.FirstOrDefault(x => x.Id == id);
         }
 
         public void Update(Car car)
