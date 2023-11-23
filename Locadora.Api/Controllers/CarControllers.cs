@@ -55,14 +55,15 @@ namespace Locadora.Api.Controllers
         }
 
         [HttpPut]
-        [Route("v1/car/")]
+        [Route("v1/car")]
         public IActionResult Update(Car car)
         {
             _carRepository.Update(car);
             return Ok(car);
         }
+
         [HttpDelete]
-        [Route("v1/car/")]
+        [Route("v1/car")]
         public IActionResult Delete(Car car)
         {
             _carRepository.DeleteById(car);

@@ -1,7 +1,6 @@
 ﻿using Locadora.Infra.Interfaces;
 using Locadora.Infra.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Win32;
 
 namespace Locadora.Infra.Repositories
 {
@@ -27,20 +26,21 @@ namespace Locadora.Infra.Repositories
             _context.SaveChanges();
         }
 
-        public Register GetById(Guid id, string name)
+        public IEnumerable<Register> Get()
         {
-            return _context.Registers.FirstOrDefault(x => x.Id == id && x.Name == name);
+            var registers = _context.Registers.ToList();
+            return registers;
+        }
+
+        public Register GetById(Guid id)
+        {
+            return _context.Registers.FirstOrDefault(x => x.Id == id);
         }
 
         public void Update(Register register)
         {
             _context.Entry(register).State = EntityState.Modified;
             _context.SaveChanges();
-        }
-
-        IEnumerable<Register> IRegisterRepository.Get()
-        {
-            throw new NotImplementedException();
         }
     }
 }

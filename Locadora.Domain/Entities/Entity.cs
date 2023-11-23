@@ -1,4 +1,4 @@
-﻿namespace BaltaStore.Shared.Entities
+﻿namespace Locadora.Domain.Entities
 {
     public abstract class Entity
     {

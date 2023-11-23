@@ -1,6 +1,4 @@
-﻿using BaltaStore.Shared.Entities;
-
-namespace Locadora.Domain.Entities
+﻿namespace Locadora.Domain.Entities
 {
     public class Register : Entity
     {

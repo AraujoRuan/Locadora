@@ -4,9 +4,10 @@ namespace Locadora.Infra.Interfaces
 {
     public interface ICompanyRepository
     {
-        void create(Company company);
-        void update(Company company);
-        Company GetById(Guid id, string cnpj);
-        void delete(Company company);
+        void Create(Company company);
+        void Update(Company company);
+        IEnumerable<Company> Get();
+        Company GetById(Guid id);
+        void DeleteById(Company company);
     }
 }

@@ -2,12 +2,13 @@
 using Locadora.Infra.Models;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace Locadora.Infra.Repositories
 {
     public class CompanyRepository : ICompanyRepository
     {
 
-          private readonly AgenciaContext _context;
+        private readonly AgenciaContext _context;
 
 
         public CompanyRepository(AgenciaContext context)
@@ -21,41 +22,27 @@ namespace Locadora.Infra.Repositories
             _context.SaveChanges();
         }
 
-        public void DeleteBayId(Company company)
+        public void DeleteById(Company company)
         {
-            _context.Companys.Remove(company);
+            _context.Remove(company);
             _context.SaveChanges();
         }
 
-        public Company GetBayId(Guid id, string cnpj)
+        public IEnumerable<Company> Get()
         {
-            return _context.Companys.FirstOrDefault(x => x.Id == id && x.Cnpj == cnpj);
+            var companys = _context.Companys.ToList();
+            return companys;
+        }
+
+        public Company GetById(Guid id)
+        {
+            return _context.Companys.FirstOrDefault(x => x.Id == id);
         }
 
         public void Update(Company company)
         {
             _context.Entry(company).State = EntityState.Modified;
             _context.SaveChanges();
-        }
-
-        void ICompanyRepository.create(Company company)
-        {
-            throw new NotImplementedException();
-        }
-
-        void ICompanyRepository.delete(Company company)
-        {
-            throw new NotImplementedException();
-        }
-
-        Company ICompanyRepository.GetById(Guid id, string cnpj)
-        {
-            throw new NotImplementedException();
-        }
-
-        void ICompanyRepository.update(Company company)
-        {
-            throw new NotImplementedException();
         }
     }
 }

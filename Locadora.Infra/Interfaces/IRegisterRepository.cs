@@ -1,5 +1,4 @@
 ﻿using Locadora.Infra.Models;
-
 namespace Locadora.Infra.Interfaces
 {
     public interface IRegisterRepository
@@ -7,7 +6,8 @@ namespace Locadora.Infra.Interfaces
         void Create(Register register);
         void Update(Register register);
         IEnumerable<Register> Get();
-        Register GetById(Guid id, string Name);
+        Register GetById(Guid id);
         void DeleteById(Register register);
+     
     }
 }

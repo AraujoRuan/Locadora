@@ -2,12 +2,12 @@ using Locadora.Infra.Interfaces;
 using Locadora.Infra.Models;
 using Locadora.Infra.Repositories;
 using Microsoft.EntityFrameworkCore;
-using static Org.BouncyCastle.Math.EC.ECCurve;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<AgenciaContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -18,6 +18,8 @@ builder.WebHost.UseUrls("http://0.0.0.0:8090");
 IConfiguration configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
     .Build();
+
+
 
 builder.Services.AddCors(options =>
 {
@@ -39,6 +41,9 @@ builder.Services.AddCors();
 builder.Services.AddSingleton<IConfiguration>(configuration);
 
 builder.Services.AddTransient<ICarRepository, CarRepository>();
+
+builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
+builder.Services.AddScoped<IRegisterRepository, RegisterRepository>();
 
 var app = builder.Build();
 
